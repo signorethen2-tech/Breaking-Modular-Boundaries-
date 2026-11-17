@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <title>Breaking Modular Boundaries</title>
+        <style>
+        :root {
+            --background: #0b1020;
+            --panel: #151e35;
+            --panel-light: #1d2945;
+            --text: #eef1ff;
+            --muted: #aab4d0;
+            --violet: #a99aff;
+            --cyan: #8be0e4;
+            --line: #303d5d;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    ellipse at 80% 0%,
+                    #29244e 0,
+                    transparent 40%
+                ),
+                var(--background);
+
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 65px 22px 45px;
+            text-align: center;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            letter-spacing: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            margin: 12px 0;
+            letter-spacing: -2px;
+        }
+
+        header h1 span {
+            color: var(--violet);
+        }
+
+        header p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 17px;
+            background: #10182c;
+            border-bottom: 1px solid var(--line);
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 22px;
+        }
+
+        .intro {
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            font-size: 28px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        .reference-count {
+            color: var(--cyan);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .reference-card {
+            background: linear-gradient(
+                145deg,
+                var(--panel),
+                #111a30
+            );
+
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 24px;
+            margin-bottom: 18px;
+
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--violet);
+        }
+
+        .reference-card h3 {
+            color: var(--violet);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+
+        .apa-entry {
+            color: var(--text);
+            padding-left: 2em;
+            text-indent: -2em;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .apa-entry em {
+            color: #c9c1ff;
+        }
+
+        .doi {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--cyan);
+            font-size: 13px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .doi:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            background: #252342;
+            border-left: 4px solid var(--violet);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 35px;
+            color: var(--muted);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 22px;
+            background: var(--violet);
+            color: #101426;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .reference-card {
+                padding: 18px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+<body> 
+        <header>
+                <h1>Breaking Modular Boundaries</h1>
+            <p> Neuropharmacological Mechanisms and Psychedelic-Assisted Therapy</p>
+            </header>
+            <nav>
+    <a href="index.html">Home</a>
+    <a href="dmt-research.html">DMT</a>
+    <a href="serotonin-receptors.html">5-HT2A</a>
+    <a href="default-mode-network.html">DMN</a>
+    <a href="rebus-hypothesis.html">REBUS</a>
+    <a href="neuroplasticity.html">Neuroplasticity</a>
+    <a href="therapeutic-potential.html">Therapeutic Potential</a>
+    <a href="research-methodology.html">Methodology</a>
+    <a href="references.html">References</a>
+</nav>
+        <main>
+        <section id="introduction">
+                <h2>Introduction</h2>
+                <p> Mental illness does not discriminate based on socioeconomic status, yet existing treatments do not provide relief for everyone and may cause difficult side effects. This project examines the renewed interest in psychedelic-assisted therapy (PAT), with a focus on DMT and the possibility of using it in carefully supervised clinical settings. DMT's potential is still being researched; it is not an established treatment for mental illness (Barker, 2018).</p>
+        </section>
+        <section id="research">
+                <h2>Research</h2>
+                <p> PAT research investigates whether a small number of supervised psychedelic sessions, combined with therapeutic support, may help people with difficult-to-treat conditions. Clinical trials cited in this project include studies of psilocybin for depression and anxiety; these findings provide context for PAT but do not establish that DMT is effective (Goodwin et al., 2022; Griffiths et al., 2016). DMT-specific clinical benefits and risks require further study.</p>
+        </section>
+        <section id="mechanisms">
+                <h2>Mechanisms</h2>
+                <p> DMT acts in part through the serotonin 5-HT2A receptor and can alter communication between brain regions, including activity in networks associated with self-focused thought (Timmermann et al., 2023). Researchers propose that experiences such as ego dissolution and models such as REBUS may help explain changes in thought patterns, while research on neural plasticity explores possible longer-term effects (Carhart-Harris &amp; Friston, 2019; Ly et al., 2018). These are active research areas, not settled explanations of how healing occurs.</p>
+        </section>
+        <section id="conclusion">
+                <h2>Conclusion</h2>
+                <p> Psychedelic-assisted therapy is a promising area of research, but it also raises safety and evidence questions. Acute psychological and physical effects can be intense, and psychedelic studies can be difficult to blind, so participant expectations may affect reported outcomes. More carefully controlled research is needed to determine who may benefit, who may face greater risks, and whether DMT can provide lasting clinical benefit.</p>
+        </section>
+        <section id="reflection">
+            <h2>Reflection</h2>
+            <h3>Why I Chose This Assignment and Modality</h3>
+            <p>
+                I chose this topic because I am interested in psychology
+                and medicine, and I chose a website as the format because
+                I have always wanted to attempt to learn how to code or to
+                build something from scratch on the web. This assignment 
+                topic was interesting to me especially because I have also 
+                always been curious on how psychedlics affect the brain and 
+                more specifically DMT and what it was a whole. This quickly 
+                lead me down a rabbit hole and I found myself looking deeper
+                into topics and appplications of DMT and psychedelics in 
+                general.
+            </p>
+            <h3>How I Adapted the Content</h3>
+            <p>
+                I reorganized the essay into linked pages focused on
+                topics such as DMT, the 5-HT2A receptor, the Default Mode
+                Network, REBUS, and therapeutic potential. I shortened
+                longer explanations, added headings to make topics easy
+                to find, and kept citations and evidence limitations with
+                the relevant material. I attempted to make it clear and consise
+                while still keeping the information that is required for understanding 
+                It was very interesting learning how to code difference things. 
+            </p>
+            <h3>New Insights</h3>
+            <p>
+                I learned that promising research on psychedelic-assisted
+                therapy does not mean every psychedelic has been proven
+                effective. The clinical trials discussed in my essay
+                studied psilocybin, while much of the DMT-specific
+                evidence addresses brain activity or possible mechanisms.
+                I also learned that explanations involving REBUS and
+                neuroplasticity are still being investigated.
+            </p>
+            <h3>Challenges and How I Overcame Them</h3>
+            <p>
+                One challenge was turning a detailed research paper into
+                clear, concise webpage sections without overstating its
+                findings. I addressed this by checking each page against
+                the essay and its sources, distinguishing DMT research
+                from psilocybin trials, and noting where proposed
+                mechanisms are still uncertain. Organizing the material
+                into linked pages also helped me present the topic in
+                smaller, easier-to-follow parts.
+            </p>
+        </section>
+        </main>
+        <script src="script.js"></script>
+</body>
+</html> 

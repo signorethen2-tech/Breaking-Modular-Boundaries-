@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research Library | Breaking Modular Boundaries</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        :root {
+            --background: #0b1020;
+            --panel: #151e35;
+            --panel-light: #1d2945;
+            --text: #eef1ff;
+            --muted: #aab4d0;
+            --violet: #a99aff;
+            --cyan: #8be0e4;
+            --line: #303d5d;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    ellipse at 80% 0%,
+                    #29244e 0,
+                    transparent 40%
+                ),
+                var(--background);
+
+            color: var(--text);
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 65px 22px 45px;
+            text-align: center;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+            letter-spacing: 4px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        header h1 {
+            font-size: clamp(35px, 6vw, 65px);
+            margin: 12px 0;
+            letter-spacing: -2px;
+        }
+
+        header h1 span {
+            color: var(--violet);
+        }
+
+        header p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 17px;
+            background: #10182c;
+            border-bottom: 1px solid var(--line);
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: var(--cyan);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 22px;
+        }
+
+        .intro {
+            margin-bottom: 35px;
+        }
+
+        .intro h2 {
+            font-size: 28px;
+        }
+
+        .intro p {
+            color: var(--muted);
+        }
+
+        .reference-count {
+            color: var(--cyan);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .reference-card {
+            background: linear-gradient(
+                145deg,
+                var(--panel),
+                #111a30
+            );
+
+            border: 1px solid var(--line);
+            border-radius: 15px;
+            padding: 24px;
+            margin-bottom: 18px;
+
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-3px);
+            border-color: var(--violet);
+        }
+
+        .reference-card h3 {
+            color: var(--violet);
+            font-size: 13px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 0;
+        }
+
+        .apa-entry {
+            color: var(--text);
+            padding-left: 2em;
+            text-indent: -2em;
+            font-size: 15px;
+            overflow-wrap: anywhere;
+        }
+
+        .apa-entry em {
+            color: #c9c1ff;
+        }
+
+        .doi {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--cyan);
+            font-size: 13px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .doi:hover {
+            text-decoration: underline;
+        }
+
+        .note {
+            background: #252342;
+            border-left: 4px solid var(--violet);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 35px;
+            color: var(--muted);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 22px;
+            background: var(--violet);
+            color: #101426;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        @media (max-width: 600px) {
+            .reference-card {
+                padding: 18px;
+            }
+
+            nav {
+                gap: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="eyebrow">Academic Research Collection</div>
+
+        <h1>Research <span>Library</span></h1>
+
+        <p>
+            The academic foundation behind Breaking Modular
+            Boundaries: Neuropharmacological Mechanisms,
+            Therapeutic Potential, and Methodological
+            Realities of Psychedelic-Assisted Therapy.
+        </p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="dmt-research.html">DMT</a>
+        <a href="serotonin-receptors.html">5-HT2A</a>
+        <a href="default-mode-network.html">DMN</a>
+        <a href="rebus-hypothesis.html">REBUS</a>
+        <a href="neuroplasticity.html">Neuroplasticity</a>
+        <a href="therapeutic-potential.html">Therapeutic Potential</a>
+        <a href="research-methodology.html">Methodology</a>
+        <a href="references.html">References</a>
+    </nav>
+
+    <main>
+
+        <section class="intro">
+
+            <div class="reference-count">
+                08 Sources · Alphabetical Order
+            </div>
+
+            <h2>Works Cited & Research Sources</h2>
+
+            <p>
+                This collection contains the scholarly articles,
+                clinical research, and reference materials used
+                to support the arguments presented throughout
+                this research project.
+
+                Each reference includes a link to its original
+                publication or digital identifier.
+            </p>
+
+        </section>
+
+        <!-- REFERENCE 1 -->
+
+        <article class="reference-card">
+
+            <h3>01 · DMT Research</h3>
+
+            <p class="apa-entry">
+                Barker, S. A. (2018). N,N-Dimethyltryptamine
+                (DMT), an endogenous hallucinogen: Past, present,
+                and future research to determine its role and
+                function. <em>Frontiers in Neuroscience, 12</em>,
+                Article 536.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.3389/fnins.2018.00536"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 2 -->
+
+        <article class="reference-card">
+
+            <h3>02 · Predictive Processing & REBUS</h3>
+
+            <p class="apa-entry">
+                Carhart-Harris, R. L., & Friston, K. J. (2019).
+                REBUS and the anarchic brain: Toward a unified
+                model of the brain action of psychedelics.
+                <em>Pharmacological Reviews, 71</em>(3),
+                316–344.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.1124/pr.118.017160"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 3 -->
+
+        <article class="reference-card">
+
+            <h3>03 · Cultural and Historical Context</h3>
+
+            <p class="apa-entry">
+                Encyclopaedia Britannica. (2025).
+                Ayahuasca.
+            </p>
+
+            <a class="doi"
+               href="https://www.britannica.com/science/ayahuasca"
+               target="_blank"
+               rel="noopener">
+                View reference article →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 4 -->
+
+        <article class="reference-card">
+
+            <h3>04 · Clinical Research</h3>
+
+            <p class="apa-entry">
+                Goodwin, G. M., Aaronson, S. T., Alvarez, O.,
+                Arden, P. C., Baker, A., Bennett, J. C., Bird, C.,
+                Blom, R. E., Brennan, C., Brusch, D., Burke, L.,
+                Campbell-Coker, K., Carhart-Harris, R., Cattell, J.,
+                Daniel, A., DeBattista, C., Dunlop, B. W., Eisen, K.,
+                Feifel, D., . . . Malievskaia, E. (2022).
+                Single-dose psilocybin for a treatment-resistant
+                episode of major depression.
+                <em>The New England Journal of Medicine, 387</em>(18),
+                1637–1648.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.1056/NEJMoa2206443"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 5 -->
+
+        <article class="reference-card">
+
+            <h3>05 · Psychedelic Clinical Trials</h3>
+
+            <p class="apa-entry">
+                Griffiths, R. R., Johnson, M. W., Carducci, M. A.,
+                Umbricht, A., Richards, W. A., Richards, B. D.,
+                Cosimano, M. P., & Klinedinst, M. A. (2016).
+                Psilocybin produces substantial and sustained
+                decreases in depression and anxiety in patients
+                with life-threatening cancer: A randomized
+                double-blind trial.
+                <em>Journal of Psychopharmacology, 30</em>(12),
+                1181–1197.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.1177/0269881116675513"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 6 -->
+
+        <article class="reference-card">
+
+            <h3>06 · Neural Plasticity</h3>
+
+            <p class="apa-entry">
+                Ly, C., Greb, A. C., Cameron, L. P., Wong, J. M.,
+                Barragan, E. V., Wilson, P. C., Burbach, K. F.,
+                Soltanzadeh Zarandi, S., Sood, A., Paddy, M. R.,
+                Duim, W. C., Dennis, M. Y., McAllister, A. K.,
+                Ori-McKenney, K. M., Gray, J. A., & Olson, D. E.
+                (2018). Psychedelics promote structural and
+                functional neural plasticity.
+                <em>Cell Reports, 23</em>(11), 3170–3182.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.1016/j.celrep.2018.05.022"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 7 -->
+
+        <article class="reference-card">
+
+            <h3>07 · Psychoplastogens</h3>
+
+            <p class="apa-entry">
+                Olson, D. E. (2018). Psychoplastogens:
+                A promising class of plasticity-promoting
+                neurotherapeutics.
+                <em>Journal of Experimental Neuroscience, 12</em>.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.1177/1179069518800508"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <!-- REFERENCE 8 -->
+
+        <article class="reference-card">
+
+            <h3>08 · DMT Neuroimaging</h3>
+
+            <p class="apa-entry">
+                Timmermann, C., Roseman, L., Haridas, S., Rosas,
+                F. E., Luan, L., Kettner, H., Martell, J.,
+                Erritzoe, D., Tagliazucchi, E., Pallavicini, C.,
+                Girn, M., Alamia, A., Leech, R., Nutt, D. J.,
+                & Carhart-Harris, R. L. (2023). Human brain effects
+                of DMT assessed via EEG-fMRI.
+                <em>Proceedings of the National Academy of Sciences,
+                120</em>(13), Article e2218949120.
+            </p>
+
+            <a class="doi"
+               href="https://doi.org/10.1073/pnas.2218949120"
+               target="_blank"
+               rel="noopener">
+                View original publication →
+            </a>
+
+        </article>
+
+        <div class="note">
+
+            <strong>Research integrity note</strong>
+
+            <p>
+                The clinical studies by Goodwin et al. and
+                Griffiths et al. investigate psilocybin rather
+                than DMT. They provide broader context for
+                psychedelic-assisted therapy, not direct proof
+                of DMT's clinical effectiveness. Timmermann et
+                al. (2023) examine DMT-related brain activity
+                using EEG-fMRI; these neuroimaging findings do
+                not establish clinical effectiveness. REBUS,
+                described by Carhart-Harris and Friston (2019),
+                is a theoretical model, not a confirmed
+                explanation of how psychedelic therapy works.
+            </p>
+
+        </div>
+
+        <a href="index.html" class="back-link">
+            ← Return to Homepage
+        </a>
+
+    </main>
+
+    <footer>
+        Breaking Modular Boundaries · Ethen Signor
+        <br>
+        Pikes Peak State College · ENG102210A · 2026
+    </footer>
+
+</body>
+</html>
+
+

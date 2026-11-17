@@ -1,0 +1,293 @@
+
+/* =================================
+   ORIGINAL COLOR THEME
+================================= */
+
+:root {
+    --background: #080D1A;
+    --panel: #111A2E;
+    --panel-light: #1B2942;
+    --panel-hover: #253653;
+
+    --text: #E8EEFF;
+    --muted: #A8B4D0;
+
+    --violet: #9B8CFF;
+    --cyan: #6DDCFF;
+
+    --line: #293957;
+    --gradient-position: 0%;
+}
+
+
+/* =================================
+   GLOBAL PAGE SETTINGS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            ellipse at 50% var(--gradient-position),
+            rgba(109, 220, 255, 0.13),
+            transparent 45%
+        ),
+        linear-gradient(
+            145deg,
+            #080D1A,
+            #10182B,
+            #080D1A
+        );
+
+    background-attachment: fixed;
+
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.7;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 55px 20px 30px;
+    margin: 0 auto;
+}
+
+header h1 {
+    color: var(--text);
+    margin: 0 auto 15px;
+}
+
+header p {
+    color: var(--muted);
+}
+
+
+/* =================================
+   NAVIGATION
+================================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    width: 100%;
+    padding: 15px 20px;
+    margin: 0 auto;
+}
+
+nav a {
+    color: var(--muted);
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    transition: 0.25s ease;
+}
+
+nav a:hover {
+    color: var(--cyan);
+    background: var(--panel);
+    border-color: var(--violet);
+}
+
+
+/* =================================
+   MAIN CONTENT ALIGNMENT
+================================= */
+
+main {
+    display: block;
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
+    padding: 45px 0;
+}
+
+
+/* Prevent Home page sections from shifting sideways */
+
+main > * {
+    max-width: 100%;
+}
+
+main h1,
+main h2,
+main h3,
+main p {
+    overflow-wrap: break-word;
+}
+
+
+/* =================================
+   INTRODUCTION SECTIONS
+================================= */
+
+.intro {
+    text-align: center;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto 40px;
+}
+
+.intro h2 {
+    color: var(--violet);
+}
+
+.intro p {
+    color: var(--muted);
+}
+
+
+/* =================================
+   CONTENT CARDS
+================================= */
+
+.card,
+.content-card,
+.reference-card {
+    width: 100%;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 25px;
+    margin: 0 0 25px;
+    transition: 0.25s ease;
+}
+
+.card:hover,
+.content-card:hover,
+.reference-card:hover {
+    background: var(--panel-hover);
+    border-color: var(--violet);
+    transform: translateY(-3px);
+}
+
+.card h2,
+.card h3,
+.content-card h2,
+.content-card h3,
+.reference-card h2,
+.reference-card h3 {
+    color: var(--violet);
+}
+
+
+/* =================================
+   LINKS AND BUTTONS
+================================= */
+
+main a {
+    color: var(--cyan);
+    text-decoration: none;
+}
+
+main a:hover {
+    color: var(--violet);
+    text-decoration: underline;
+}
+
+button {
+    background: var(--violet);
+    color: #080D1A;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.25s ease;
+}
+
+button:hover {
+    background: var(--cyan);
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   REFERENCES PAGE
+================================= */
+
+.apa-entry {
+    color: var(--text);
+    line-height: 1.8;
+}
+
+.doi {
+    color: var(--cyan);
+    overflow-wrap: anywhere;
+}
+
+.note {
+    background: var(--panel-light);
+    border-left: 4px solid var(--violet);
+    padding: 18px;
+    border-radius: 8px;
+    color: var(--muted);
+}
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--muted);
+    border-top: 1px solid var(--line);
+    margin-top: 40px;
+}
+
+
+/* =================================
+   MOBILE RESPONSIVENESS
+================================= */
+
+@media (max-width: 700px) {
+
+    header {
+        padding: 35px 15px 20px;
+    }
+
+    nav {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    nav a {
+        padding: 7px 10px;
+        font-size: 14px;
+    }
+
+    main {
+        width: calc(100% - 30px);
+        padding: 30px 0;
+    }
+
+    .card,
+    .content-card,
+    .reference-card {
+        padding: 18px;
+    }
+}
+
+
